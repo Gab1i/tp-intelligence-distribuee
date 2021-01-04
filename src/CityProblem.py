@@ -72,7 +72,7 @@ class CityProblem:
 
         return next
 
-    def _distance(pos1, pos2):
+    def _distance(self, pos1, pos2):
         """
         Haversine distance
         :param pos1: tuple of (x, y) position

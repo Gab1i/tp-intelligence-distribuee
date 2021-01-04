@@ -95,7 +95,7 @@ class Window(Tk):
         """ Draw points for each node's position in the problem
         """
         maxX, maxY, minX, minY = self.problem.GetMax()
-
+        print(f'{maxX}, {maxY}, {minX}, {minY}')
         self.lines = {}
         cities = []
         labels = []
@@ -103,8 +103,8 @@ class Window(Tk):
         self.labelEpochs = self.canvas.create_text(20, 20, fill="white", font="Times 20 italic bold", text='0')
 
         for c1, position_c1 in self.problem._cities.items():
-            x = (position_c1[0] - minX) * (self.width - 15) / maxX + 15
-            y = (position_c1[1] - minY) * (self.height - 15) / maxY + 15
+            x = (position_c1[0] - minX) * (self.width - 25) / (maxX-minX+5) + 15
+            y = (position_c1[1] - minY) * (self.height - 25) / (maxY-minY+5) + 15
 
             a = self.canvas.create_oval(x, y, x + 10, y + 10, fill=self.rgb(255, 0, 0))
             l = self.canvas.create_text(x + 6, y - 6, fill="white", font="Times 10 italic bold", text=c1)
@@ -116,10 +116,10 @@ class Window(Tk):
         for name_c1, position_c1 in self.problem._cities.items():
             for name_c2, position_c2 in self.problem._cities.items():
                 if name_c2 not in self.lines[name_c1] and name_c2 != name_c1:
-                    x1 = (position_c1[0] - minX) * (self.width - 15) / maxX + 15
-                    y1 = (position_c1[1] - minY) * (self.height - 15) / maxY + 15
-                    x2 = (position_c2[0] - minX) * (self.width - 15) / maxX + 15
-                    y2 = (position_c2[1] - minY) * (self.height - 15) / maxY + 15
+                    x1 = (position_c1[0] - minX) * (self.width - 15) / (maxX-minX+5) + 15
+                    y1 = (position_c1[1] - minY) * (self.height - 15) / (maxY-minY+5) + 15
+                    x2 = (position_c2[0] - minX) * (self.width - 15) / (maxX-minX+5) + 15
+                    y2 = (position_c2[1] - minY) * (self.height - 15) / (maxY-minY+5) + 15
                     line = self.canvas.create_line(x1, y1, x2, y2, fill=self.rgb(0, 0, 0))
                     self.lines[name_c1][name_c2] = line
 

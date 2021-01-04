@@ -24,7 +24,7 @@ Le panneau de droite permet de sélectionner les paramètres de la simulation. U
 
 
 ## Problème alternatif
-Il est possible de lancer l'application avec un problème légèrement différent dans lequel les points sont des villes de Frances avec leurs positions en latitude et longitude.
+Il est possible de lancer l'application avec un problème légèrement différent dans lequel les points sont des villes de France (avec une rotation à 90° 😅) avec leurs positions en latitude et longitude.
 La distance calculée entre les points est calculée à l'aide de la formule de Haversine.
 
 Pour lancer cette version du code:
