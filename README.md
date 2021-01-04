@@ -22,6 +22,8 @@ Le panneau de droite permet de sélectionner les paramètres de la simulation. U
 - Le bouton pause permet de mettre en pause la simulation, cliquez sur Start pour la relancer
 - Le bouton stop coupe complètement la simulation. Les paramètres sélectionnés ne seront pris en compte qu'**après avoir stoppé la simulation** en cliquant sur Start. 
 
+La quantité de phéromones déposée à chaque tour par les fourmis est représentée par les lignes entre les points. Plus une ligne est rouge, plus il y a des phéromones sur cet arc.
+
 
 ## Problème alternatif
 Il est possible de lancer l'application avec un problème légèrement différent dans lequel les points sont des villes de France (avec une rotation à 90° 😅) avec leurs positions en latitude et longitude.
